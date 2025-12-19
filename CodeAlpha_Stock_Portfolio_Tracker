@@ -1,3 +1,34 @@
+ASK-2 📈 Stock Portfolio Tracker (Python)
+
+📌 Project Overview The Stock Portfolio Tracker is a simple Python-based console application that helps users calculate their total stock investment. The program uses predefined stock prices and allows users to enter stock names and quantities to compute the overall investment value.
+
+🎯 Objective To calculate the total investment value of a stock portfolio based on user input and fixed stock prices.
+
+✨ Features Uses a hardcoded dictionary for stock prices Accepts user input for stock names and quantities Calculates individual and total investment values Displays a clear portfolio summary Optionally saves the portfolio details to a text file
+
+🛠️ Technologies Used Programming Language: Python
+
+Key Concepts Applied: Dictionary Input and Output operations Basic arithmetic calculations While loop File handling (optional)
+
+▶️ How to Run the Project
+
+Ensure Python is installed on your system.
+Save the program code in a file (e.g., stock_tracker.py).
+Open Command Prompt or Terminal.
+Run the program using: python stock_tracker.py
+🎮 How It Works
+
+The program displays available stock prices.
+The user enters a stock name and quantity.
+The investment value is calculated using predefined prices.
+The user can add multiple stocks.
+When finished, the program displays the total investment value.
+The result is saved in a .txt file for future reference.
+📊 Sample Stock Prices Used AAPL – ₹180 TSLA – ₹250 GOOGL – ₹140 AMZN – ₹130 TATA – ₹160
+
+📚 Learning Outcomes Understanding dictionaries in Python Performing arithmetic operations Handling user input effectively
+
+Program:
 # Hardcoded stock prices
 stock_prices = {
     "AAPL": 180,
@@ -44,3 +75,12 @@ with open("portfolio.txt", "w") as file:
     file.write(f"\nTotal Investment: ₹{total_investment}")
 
 print("\n📁 Portfolio saved to portfolio.txt")
+
+Output:
+📈 Welcome to Stock Portfolio Tracker
+Enter stock name (or 'done' to finish): TATAL
+Enter quantity: 160
+✔ TATAL added. Investment: ₹25600
+Enter stock name (or 'done' to finish): TSLA
+Enter quantity: 250
+✔ TSLA added. Investment: ₹62500
