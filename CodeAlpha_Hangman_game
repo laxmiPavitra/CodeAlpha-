@@ -1,3 +1,34 @@
+TASK-1 🎮 Hangman Game (Python)
+
+📌 Project Overview This project is a simple text-based Hangman game developed using Python. The player must guess a hidden word one letter at a time within a limited number of attempts. The game runs entirely in the console and is designed for beginners to understand core programming concepts.
+
+🎯 Objective To guess the randomly selected word correctly before running out of attempts.
+
+✨ Features Uses a predefined list of 5 words Random word selection using the random module Allows one-letter input at a time Maximum of 6 incorrect attempts Displays progress with underscores (_) for unguessed letters User-friendly messages for correct, incorrect, and repeated guesses
+
+🛠️ Technologies Used Programming Language: Python Concepts Applied: Random module While loop If-else conditions Strings and lists User input and output
+
+▶️ How to Run the Project
+
+Make sure Python is installed on your system.
+Copy the code into a .py file (for example: hangman.py).
+Open a terminal or command prompt.
+Run the file using the command: python hangman.py
+🎮 How to Play
+
+The game selects a random word from the list.
+You must guess the word by entering one letter at a time.
+Correct guesses reveal the letter in the word.
+Incorrect guesses reduce the remaining attempts.
+You win if you guess all letters correctly.
+You lose if all 6 attempts are used.
+🏆 Winning Condition All letters in the secret word are guessed correctly before attempts reach zero.
+
+💀 Losing Condition Attempts become zero before guessing the full word.
+
+📚 Learning Outcomes Understanding loops and conditionals Handling user input validation Working with lists and strings Implementing simple game logic in Python
+
+Program:
 import random
 
 # List of predefined words
@@ -7,10 +38,8 @@ words = ["apple", "python", "cloud", "happy", "world"]
 secret_word = random.choice(words)
 guessed_letters = []
 attempts = 6
-
 print("🎮 Welcome to Hangman Game!")
 print("Guess the word letter by letter.")
-
 # Game loop
 while attempts > 0:
     # Display current progress
@@ -52,3 +81,39 @@ while attempts > 0:
 # Loss condition
 if attempts == 0:
     print("\n💀 Game Over! The word was:", secret_word)
+
+Output:
+🎮 Welcome to Hangman Game!
+Guess the word letter by letter.
+
+Word: _ _ _ _ _ _ 
+Enter a letter: w
+❌ Wrong guess! Attempts left: 5
+
+Word: _ _ _ _ _ _ 
+Enter a letter: h
+✔ Good guess!
+
+Word: _ _ _ h _ _ 
+Enter a letter: p
+✔ Good guess!
+
+Word: p _ _ h _ _
+Enter a letter: y
+✔ Good guess!
+
+Word: p y _ h _ _
+Enter a letter: t
+✔ Good guess!
+
+Word: p y t h _ _
+Enter a letter: o
+✔ Good guess!
+
+Word: p y t h o _
+Enter a letter: n
+✔ Good guess!
+
+Word: p y t h o n
+
+🎉 Congratulations! You guessed the word: python
