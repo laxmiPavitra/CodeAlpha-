@@ -1,0 +1,106 @@
+🤖 Built a Basic Rule-Based Chatbot using Python
+📌 Overview
+This project implements an advanced rule-based chatbot using Python.
+The chatbot interacts with users through predefined commands and responds using simple decision-making logic.
+
+🎯 Objective
+To build a chatbot that simulates basic conversation using conditional statements without using AI or machine learning.
+
+✨ Features
+Supports greetings (hello, hi, hey)
+Responds to common questions
+Displays a command menu
+Tracks number of user messages
+Graceful exit with conversation summary
+
+🛠️ Concepts Used
+Functions
+Loops
+Dictionaries
+Conditional statements (if-elif-else)
+Input / Output handling
+
+▶️ How to Run
+python chatbot.py
+
+💬 Sample Commands
+hello
+how are you
+menu
+help
+bye
+
+📚 Learning Outcome
+Understand rule-based chatbot design
+Practice Python control structures
+Improve logical thinking and code organization.
+
+Code:
+#chatbot
+def chatbot():
+    # Display welcome message and instructions
+    print("🤖 Welcome to the Basic Chatbot!")
+    print("You can type the following commands:")
+    print("- hello / hi / hey")
+    print("- how are you")
+    print("- what is your name")
+    print("- help")
+    print("- bye (to exit the chat)\n")
+
+    # Infinite loop to keep the chatbot running
+    while True:
+        # Take input from the user, remove extra spaces, convert to lowercase
+        user_input = input("You: ").strip().lower()
+
+        # Check if the user entered nothing
+        if user_input == "":
+            print("🤖 Chatbot: Please type something.")
+
+        # Greeting responses
+        elif user_input == "hello":
+            print("🤖 Chatbot: Hi! Nice to meet you.")
+
+        elif user_input in ["hi", "hey"]:
+            print("🤖 Chatbot: Hello there!")
+
+        # Respond to well-being question
+        elif user_input == "how are you":
+            print("🤖 Chatbot: I'm fine, thanks for asking!")
+
+        # Respond to name query
+        elif user_input == "what is your name":
+            print("🤖 Chatbot: I am a simple rule-based chatbot.")
+
+        # Help command to guide the user
+        elif user_input == "help":
+            print("🤖 Chatbot: Try saying hello, ask how I am, or type bye to exit.")
+
+        # Exit condition
+        elif user_input == "bye":
+            print("🤖 Chatbot: Goodbye! Have a nice day 😊")
+            break  # Exit the loop and end the program
+
+        # Default response for unknown inputs
+        else:
+            print("🤖 Chatbot: Sorry, I don't understand that command.")
+
+# Call the chatbot function to start the program
+chatbot()
+
+Output:
+🤖 Welcome to the Basic Chatbot!
+You can type the following commands:
+- hello / hi / hey
+- how are you
+- what is your name
+- help
+- bye (to exit the chat)
+
+You: hi
+🤖 Chatbot: Hello there!
+You: how are you
+🤖 Chatbot: I'm fine, thanks for asking!
+You: help
+🤖 Chatbot: Try saying hello, ask how I am, or type bye to exit.
+You: bye
+🤖 Chatbot: Goodbye! Have a nice day 😊
